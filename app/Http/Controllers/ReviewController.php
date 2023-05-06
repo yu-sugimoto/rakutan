@@ -11,7 +11,7 @@ class ReviewController extends Controller
     public function index()
     {
         // 最新のレコード数＝最新のレコードのid
-        $newid = Review::orderBy('id', 'desc')->first();
+        $newid = Review::get()->count();
         return view('index', compact('newid'));
     }
 
@@ -19,7 +19,7 @@ class ReviewController extends Controller
     {
         // 最新のレコード数＝最新のレコードのid
         // get()するとリスト型で取り出してしまうのでNG
-        $newid = Review::orderBy('id', 'desc')->first();
+        $newid = Review::get()->count();
 
         // 検索フォームに入力された値を取得
         $department = $request->input('department');

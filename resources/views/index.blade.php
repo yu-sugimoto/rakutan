@@ -12,7 +12,7 @@
                     授業レビューを投稿する
                 </div>
                 <div class="review-content">
-                    <p style='padding: 0 1rem'>これまでのレビュー件数：{{ $newid->id }}件</p>
+                    <p style='padding: 0 1rem'>これまでのレビュー件数：{{ $newid }}件</p>
                     <div class="d-grid gap-2 col-10 mx-auto">
                         <a class="btn btn-primary" href="{{ route('review.form')}}">投稿</a>
                     </div>
