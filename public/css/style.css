@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+/* html */
+html {
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+}
+
+/* header*/
+
+/* main */
+main {
+    background-color: #e4f0fa;
+}
+
+.university {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.contents {
+    background-color: #fff;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-content,
+.search-content {
+    background-color: #F0F0F0;
+    padding: 0.5rem;
+}
+
+.review-content {
+    margin-bottom: 1rem;
+}
+
+.content-label {
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #243e8c;
+    background-color: #fff;
+    border: 2px solid #243e8c;
+}
+
+.step {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.step-box {
+    background-color: #fff;
+    font-size: 1rem;
+    border: 1px solid #C1C9C9;
+}
+
+.aria-current {
+    border-color: #243e8c;
+    background-color: #cbd7f5;
+    color: #243e8c;
+    font-weight: bold;
+}
+
+.review-form,
+.review-thanks {
+    background-color: #fff;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.setting-area {
+    padding: 1rem;
+}
+
+.thanks-area {
+    font-size: 1.0rem;
+    padding: 0.5rem;
+    border: 2px solid;
+    border-radius: 0.25rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/* 楽単度 */
+.setting-area>p {
+    color: #999999;
+    font-size: 3px;
+}
+
+/* 星レビュー */
+/* 要素をインラインブロックにして逆向き */
+.rate-form {
+    display: inline-block;
+    direction: rtl;
+}
+
+/* 本来のラジオボタン非表示 */
+.rate-form input[type=radio] {
+    display: none;
+}
+
+/* 背景の星設定 */
+.rate-form label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+/* 選択された星以降すべてに色を付ける */
+.rate-form label:hover,
+.rate-form label:hover~label,
+.rate-form input[type=radio]:checked~label {
+    color: #ffcc00;
+}
+
+/* 確認用星レビュー */
+.rate-form-check {
+    display: inline-block;
+    direction: rtl;
+}
+
+.rate-form-check input[type=radio] {
+    display: none;
+}
+
+.rate-form-check label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.rate-form-check input[type=radio]:checked~label {
+    color: #ffcc00;
+}
+
+/* bootstrap変更 */
+.btn-primary {
+    color: #fff;
+    background-color: #243e8c;
+    border-color: #243e8c;
+}
+
+.card-text>span {
+    color: orange;
+}
+
+/* result */
+.result {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.result>span {
+    padding: 0.2rem;
+    float: right;
+    background-color: #fff;
+    border: 0.5px solid;
+}
+
+/* footer */
+.contact-link {
+    padding: 1rem
+}
