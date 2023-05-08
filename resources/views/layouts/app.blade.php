@@ -18,6 +18,8 @@
     <!-- Google adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325377930156590" crossorigin="anonymous"></script>
     <meta charset="utf-8">
+    <meta name="description" content="関西学院大学の授業評価サイト。関西学院大学の教授・授業に対する評価や学生のコメントを掲載。">
+    <meta name="keywords" content="関西学院大学,楽単,授業情報,楽単発見器">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
