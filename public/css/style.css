@@ -173,3 +173,10 @@ main {
 .contact-link {
     padding: 1rem
 }
+
+/* 広告 */
+.advertisement {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
