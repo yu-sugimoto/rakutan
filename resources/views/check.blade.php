@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="container-fluid col-sm-8">
+        <div class="container-fluid col-sm-7">
             <div class="content-label" style="margin-top: 0.5rem;;">
                 授業レビューを投稿する
             </div>
@@ -95,7 +95,11 @@
                 </form>
             </div>
         </div>
-        <!-- <div class="col-sm-4"></div> -->
+        <div class="col-sm-5">
+            <a href="https://px.a8.net/svt/ejp?a8mat=3T8P7H+8ZAE9E+41NC+5ZMCH" rel="nofollow">
+                <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=230513309543&wid=001&eno=01&mid=s00000018876001006000&mc=1"></a>
+            <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3T8P7H+8ZAE9E+41NC+5ZMCH" alt="">
+        </div>
     </div>
 </div>
 @endsection

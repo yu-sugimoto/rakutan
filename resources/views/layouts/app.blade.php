@@ -2,7 +2,7 @@
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head prefix="og: https://opg.me/ns#">
+<head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCGB0E1DLJ"></script>
     <script>
@@ -18,12 +18,19 @@
     <!-- Google adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325377930156590" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <meta property="og:title" content="楽単発見器 - 関西学院大学">
+
     <meta name="description" content="関西学院大学の授業評価サイト。関西学院大学の教授・授業に対する評価や学生のコメントを掲載。">
-    <meta name="keywords" content="関西学院大学,楽単,授業情報,楽単発見器">
+    <meta name="keywords" content="関西学院大学,楽単,授業情報,楽単発見器,授業評価,授業レビュー">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', '楽単発見器 - 関西学院大学') }}</title>
+    <link rel="canonical" href="https://rakutan.herokuapp.com">
+
+    <meta property="og:title" content="楽単発見器 - 関西学院大学">
+    <meta property="og:description" content="関西学院大学の授業評価サイト。関西学院大学の教授・授業に対する評価や学生のコメントを掲載。">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="楽単発見器">
+    <meta property="og:url" content="https://rakutan.herokuapp.com">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
