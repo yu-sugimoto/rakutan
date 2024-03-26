@@ -37,7 +37,9 @@
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+    <!-- 開発環境では"style.cssをasset関数で呼び出す（絶対パスで読み込むことが可能） -->
+    <!-- 本番環境の場合でSSL貸した通信しか行わないのであれば"style.cssをsecure_asset関数を使う -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>

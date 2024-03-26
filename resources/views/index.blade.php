@@ -25,7 +25,6 @@
                     <div class="search-field">
                         <form action="{{ route('search') }}" method="get">
                             @csrf
-
                             <div class='setting-area' style='padding: 0.2rem 1rem'>
                                 <label for='department-label'>学部名</label>
                                 <select class="form-select" name="department" id="department-label">
