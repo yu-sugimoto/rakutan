@@ -33,8 +33,9 @@ class ReviewController extends Controller
             $query->where('department', 'LIKE', $department);
         }
 
+        // "lecture", "teacher"は部分一致
         if (!empty($lecture)) {
-            $query->where('lecture', 'LIKE', $lecture);
+            $query->where('lecture', 'LIKE', "%$lecture%");
         }
 
         if (!empty($teacher)) {
@@ -83,5 +84,13 @@ class ReviewController extends Controller
             //送信完了ページのviewを表示
             return view('thanks');
         }
+    }
+
+    public function terms(){
+        return view('terms');
+    }
+
+    public function privacy(){
+        return view('privacy');
     }
 }

@@ -13,7 +13,10 @@ main {
     background-color: #e4f0fa;
 }
 
-.university {
+.university,
+.syllabus,
+.terms,
+.privacy {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -170,13 +173,7 @@ main {
 }
 
 /* footer */
-.contact-link {
+.link,
+.madeby {
     padding: 1rem
-}
-
-/* 広告 */
-.advertisement {
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }

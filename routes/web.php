@@ -19,3 +19,5 @@ Route::get('/seach', [ReviewController::class, 'search'])->name('search');
 Route::get('/form', [ReviewController::class, 'form'])->name('review.form');
 Route::post('/form/check', [ReviewController::class, 'check'])->name('review.check');
 Route::post('/form/thanks', [ReviewController::class, 'thanks'])->name('review.thanks');
+Route::get('/terms', [ReviewController::class, 'terms'])->name('terms');
+Route::get('/privacy', [ReviewController::class, 'privacy'])->name('privacy');

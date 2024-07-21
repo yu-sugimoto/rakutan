@@ -5,7 +5,12 @@
     <div class="row">
         <div class="container-fluid col-sm-8">
             <div class="university">
-                <h5>関西学院大学 - 楽単発見器</h5>
+                <h5 class="text-center">関学生のための楽単発見器</h5>
+            </div>
+            <div class="syllabus">
+                <p class="text-center">授業名・先生名などの確認でご使用ください<br>
+                    → <a href="https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree">関西学院大学シラバス</a>
+                </p>
             </div>
             <div class="contents">
                 <div class="content-label">
@@ -44,6 +49,19 @@
                                     <option value="工学部">工学部</option>
                                     <option value="生命環境学部">生命環境学部</option>
                                     <option value="建築学部">建築学部</option>
+                                    <option value="スポーツ健康科学プログラム事務局">スポーツ健康科学プログラム事務局</option>
+                                    <option value="共通教育センター">共通教育センター</option>
+                                    <option value="キャリアセンター">キャリアセンター</option>
+                                    <option value="共通教育センター（情報科学科目）">共通教育センター（情報科学科目）</option>
+                                    <option value="言語教育研究センター">言語教育研究センター</option>
+                                    <option value="国際教育・協力センター（CIEC JEASP）">国際教育・協力センター（CIEC JEASP）</option>
+                                    <option value="教職教育研究センター（資格）">教職教育研究センター（資格）</option>
+                                    <option value="教職教育研究センター（教職専門）">教職教育研究センター（教職専門）</option>
+                                    <option value="国際教育・協力センター/CIEC">国際教育・協力センター/CIEC</option>
+                                    <option value="キリスト教と文化研究センター">キリスト教と文化研究センター</option>
+                                    <option value="日本語教育センター">日本語教育センター</option>
+                                    <option value="ハンズオン・ラーニングセンター">ハンズオン・ラーニングセンター</option>
+                                    <option value="国連・外交統括センター">国連・外交統括センター</option>
                                 </select>
                             </div>
                             <div class='setting-area' style='padding: 0.2rem 1rem'>
@@ -62,7 +80,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="col-sm-4"></div> -->
     </div>
 </div>
 
