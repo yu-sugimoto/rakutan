@@ -59,7 +59,7 @@
             <div class="link">
                 <a href="{{ route('terms') }}" style="padding:0.3rem;">利用規約</a>
                 <a href="{{ route('privacy') }}" style="padding:0.3rem;">プライバシーポリシー</a>
-                <a href="mailto:yuyuyuk2002@gmail.com" style="padding:0.3rem;">お問い合わせ</a>
+                <a href="mailto:gtw65115@kwansei.ac.jp" style="padding:0.3rem;">お問い合わせ</a>
             </div>
             <!-- <div class="madeby">
                 Made by Yu Sugimoto.
