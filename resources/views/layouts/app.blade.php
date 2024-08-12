@@ -61,9 +61,9 @@
                 <a href="{{ route('privacy') }}" style="padding:0.3rem;">プライバシーポリシー</a>
                 <a href="mailto:yuyuyuk2002@gmail.com" style="padding:0.3rem;">お問い合わせ</a>
             </div>
-            <div class="madeby">
+            <!-- <div class="madeby">
                 Made by Yu Sugimoto.
-            </div>
+            </div> -->
         </div>
     </footer>
 </body>
