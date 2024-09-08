@@ -45,7 +45,7 @@ class ReviewController extends Controller
         // レコード数を取得
         $count = $query->count();
         // 探してきたレコードをgetして変数に格納する
-        $searchs = $query->orderBy('created_at', 'desc')->paginate(10);
+        $searchs = $query->orderBy('year', 'desc')->orderBy('created_at', 'desc')->paginate(10);
         return view('search', compact('count', 'newid', 'searchs', 'department', 'lecture', 'teacher'));
     }
 

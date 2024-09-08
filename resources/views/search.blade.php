@@ -81,7 +81,7 @@
                     <!-- 検索結果はここから -->
                     <div class="result-field">
                         <div class='result'>
-                            <h5>検索結果</h5><span>新着順</span>
+                            <h5>検索結果</h5><span>受講年順</span>
                             <p>{{ $count }} 件のレビューが見つかりました</p>
                         </div>
                         @foreach($searchs as $search)
