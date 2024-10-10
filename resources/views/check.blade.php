@@ -37,7 +37,7 @@
                             <input type="hidden" name="lecture" value="{{ $inputs['lecture'] }}">
                         </div>
                         <div class="setting-area">
-                            <label class="form-label">受講年</label>
+                            <label class="form-label">受講年度</label>
                             <div class="form-control-plaintext">
                                 {{ $inputs['year'] }}
                             </div>

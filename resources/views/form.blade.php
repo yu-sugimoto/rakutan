@@ -68,7 +68,7 @@
                             <div class="invalid-feedback">受講講義を入力してください（スペース禁止）</div>
                         </div>
                         <div class="setting-area">
-                            <label class="form-label">受講年</label>
+                            <label class="form-label">受講年度</label>
                             <select class="form-select" name="year" required>
                                 <option value="">プルダウンから選択</option>
                                 <option value="2021">2021</option>
@@ -76,7 +76,7 @@
                                 <option value="2023">2023</option>
                                 <option value="2024">2024</option>
                             </select>
-                            <div class="invalid-feedback">受講年を選択してください</div>
+                            <div class="invalid-feedback">受講年度を選択してください</div>
                         </div>
                         <div class="setting-area">
                             <label class="form-label">先生名</label>
