@@ -2,33 +2,50 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="container-fluid col-sm-8">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <!-- Syllabus Link -->
             <div class="syllabus">
-                <p class="text-center">授業名・先生名などの確認でご使用ください<br>
-                    → <a href="https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree">関西学院大学シラバス</a>
+                <p class="text-center mb-0">
+                    <i class="bi bi-info-circle me-1"></i>
+                    授業名・先生名などの確認でご使用ください<br>
+                    <i class="bi bi-arrow-right me-1"></i>
+                    <a href="https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree" target="_blank" rel="noopener">
+                        関西学院大学シラバス <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
                 </p>
             </div>
-            <div class="content-label" style="margin-top: 0.5rem;;">
+
+            <!-- Content Label -->
+            <div class="content-label">
+                <i class="bi bi-pencil-square"></i>
                 授業レビューを投稿する
             </div>
+
+            <!-- Review Content -->
             <div class="review-content">
+                <!-- Step Indicator -->
                 <div class="step text-center">
                     <div class="step-box aria-current">
-                        <span>入力</span>
+                        <i class="bi bi-1-circle me-1"></i><span>入力</span>
                     </div>
                     <div class="step-box">
-                        <span>確認</span>
+                        <i class="bi bi-2-circle me-1"></i><span>確認</span>
                     </div>
                     <div class="step-box">
-                        <span>完了</span>
+                        <i class="bi bi-3-circle me-1"></i><span>完了</span>
                     </div>
                 </div>
+
+                <!-- Form -->
                 <form class="needs-validation" action="{{ route('review.check') }}" method="post" novalidate>
                     @csrf
                     <div class="review-form">
+                        <!-- Department -->
                         <div class="setting-area">
-                            <label class="form-label">学部名</label>
+                            <label class="form-label">
+                                <i class="bi bi-building me-1"></i>学部名
+                            </label>
                             <select class="form-select" name="department" required>
                                 <option value="">プルダウンから選択</option>
                                 <option value="神学部">神学部</option>
@@ -60,38 +77,63 @@
                                 <option value="ハンズオン・ラーニングセンター">ハンズオン・ラーニングセンター</option>
                                 <option value="国連・外交統括センター">国連・外交統括センター</option>
                             </select>
-                            <div class="invalid-feedback">学部名を選択してください</div>
+                            <div class="invalid-feedback">
+                                <i class="bi bi-exclamation-circle me-1"></i>学部名を選択してください
+                            </div>
                         </div>
+
+                        <!-- Lecture -->
                         <div class="setting-area">
-                            <label class="form-label">受講講義</label>
-                            <input class="form-control" type="text" name="lecture" pattern="^\S*$" required>
-                            <div class="invalid-feedback">受講講義を入力してください（スペース禁止）</div>
+                            <label class="form-label">
+                                <i class="bi bi-book me-1"></i>受講講義
+                            </label>
+                            <input class="form-control" type="text" name="lecture" pattern="^\S*$" required placeholder="講義名を入力（スペース禁止）">
+                            <div class="invalid-feedback">
+                                <i class="bi bi-exclamation-circle me-1"></i>受講講義を入力してください（スペース禁止）
+                            </div>
                         </div>
+
+                        <!-- Year -->
                         <div class="setting-area">
-                            <label class="form-label">受講年度</label>
+                            <label class="form-label">
+                                <i class="bi bi-calendar-event me-1"></i>受講年度
+                            </label>
                             <select class="form-select" name="year" required>
                                 <option value="">プルダウンから選択</option>
                                 <option value="2021">2021</option>
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
                                 <option value="2024">2024</option>
+                                <option value="2025">2025</option>
                             </select>
-                            <div class="invalid-feedback">受講年度を選択してください</div>
+                            <div class="invalid-feedback">
+                                <i class="bi bi-exclamation-circle me-1"></i>受講年度を選択してください
+                            </div>
                         </div>
+
+                        <!-- Teacher -->
                         <div class="setting-area">
-                            <label class="form-label">先生名</label>
-                            <input class="form-control" type="text" name="teacher" pattern="^\S*$" required>
-                            <div class="invalid-feedback">先生名を入力してください（スペース禁止）</div>
+                            <label class="form-label">
+                                <i class="bi bi-person me-1"></i>先生名
+                            </label>
+                            <input class="form-control" type="text" name="teacher" pattern="^\S*$" required placeholder="先生名を入力（スペース禁止）">
+                            <div class="invalid-feedback">
+                                <i class="bi bi-exclamation-circle me-1"></i>先生名を入力してください（スペース禁止）
+                            </div>
                         </div>
+
+                        <!-- Rating -->
                         <div class="setting-area" id="review_easy">
-                            <label class="form-label">楽単度</label>
+                            <label class="form-label">
+                                <i class="bi bi-star me-1"></i>楽単度
+                            </label>
                             <p>
-                                ※評価の規準<br>
-                                星５つ・・・楽すぎ、もう一度取りたい<br>
-                                星４つ・・・まあまあ楽、余裕があれば取る<br>
-                                星３つ・・・どちらともいえない、取ってもいい<br>
-                                星２つ・・・ちょいムズ、取りたいと思わない<br>
-                                星１つ・・・激ムズ、二度と取らない<br>
+                                <strong>評価の基準</strong><br>
+                                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i> 楽すぎ、もう一度取りたい<br>
+                                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-muted"></i> まあまあ楽、余裕があれば取る<br>
+                                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i> どちらともいえない、取ってもいい<br>
+                                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i> ちょいムズ、取りたいと思わない<br>
+                                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i><i class="bi bi-star text-muted"></i> 激ムズ、二度と取らない
                             </p>
                             <div class="rate-form">
                                 <input class="form-check-input" id="star5" type="radio" name="review_easy" value="5" required>
@@ -104,17 +146,29 @@
                                 <label for="star2">★</label>
                                 <input class="form-check-input" id="star1" type="radio" name="review_easy" value="1" required>
                                 <label for="star1">★</label>
-                                <div class="invalid-feedback" style="direction: ltr;">楽単度を選択してください</div>
+                                <div class="invalid-feedback" style="direction: ltr;">
+                                    <i class="bi bi-exclamation-circle me-1"></i>楽単度を選択してください
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Comment -->
                         <div class="setting-area">
-                            <label class="form-label">コメント</label>
+                            <label class="form-label">
+                                <i class="bi bi-chat-left-text me-1"></i>コメント
+                            </label>
                             <textarea class="form-control" name="review_comment" placeholder="後輩に向けてコメントをお願いします！" required></textarea>
-                            <div class="invalid-feedback">コメントを入力して下さい</div>
+                            <div class="invalid-feedback">
+                                <i class="bi bi-exclamation-circle me-1"></i>コメントを入力して下さい
+                            </div>
                         </div>
+
+                        <!-- Submit Button -->
                         <div class="setting-area">
-                            <div class="d-grid gap-2 col-10 mx-auto">
-                                <button type="submit" class="btn btn-primary">確認画面へ</button>
+                            <div class="d-grid gap-2 col-md-8 mx-auto">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-arrow-right-circle me-1"></i>確認画面へ
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -124,6 +178,7 @@
     </div>
 </div>
 @endsection
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const forms = document.querySelectorAll('.needs-validation');

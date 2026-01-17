@@ -2,38 +2,59 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="container-fluid col-sm-8">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <!-- Hero Section -->
             <div class="university">
-                <h5 class="text-center">関学生のための楽単発見器</h5>
+                <h5><i class="bi bi-mortarboard-fill me-2"></i>関学生のための楽単発見器</h5>
             </div>
+
+            <!-- Syllabus Link -->
             <div class="syllabus">
-                <p class="text-center">授業名・先生名などの確認でご使用ください<br>
-                    → <a href="https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree">関西学院大学シラバス</a>
+                <p class="text-center mb-0">
+                    <i class="bi bi-info-circle me-1"></i>
+                    授業名・先生名などの確認でご使用ください<br>
+                    <i class="bi bi-arrow-right me-1"></i>
+                    <a href="https://syllabus.kwansei.ac.jp/uniasv2/UnSSOLoginControlFree" target="_blank" rel="noopener">
+                        関西学院大学シラバス <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
                 </p>
             </div>
+
+            <!-- Main Content Card -->
             <div class="contents">
+                <!-- Review Section -->
                 <div class="content-label">
+                    <i class="bi bi-pencil-square"></i>
                     授業レビューを投稿する
                 </div>
                 <div class="review-content">
-                    <p style='padding: 0 1rem'>これまでのレビュー件数：{{ $newid }}件</p>
-                    <div class="d-grid gap-2 col-10 mx-auto">
-                        <a class="btn btn-primary" href="{{ route('review.form')}}">投稿</a>
+                    <p class="mb-3">
+                        <i class="bi bi-chat-quote me-1"></i>
+                        これまでのレビュー件数：<strong>{{ $newid }}件</strong>
+                    </p>
+                    <div class="d-grid gap-2 col-md-8 mx-auto">
+                        <a class="btn btn-primary" href="{{ route('review.form')}}">
+                            <i class="bi bi-plus-circle me-1"></i>レビューを投稿する
+                        </a>
                     </div>
                 </div>
+
+                <!-- Search Section -->
                 <div class="content-label">
+                    <i class="bi bi-search"></i>
                     授業レビューを探す
                 </div>
                 <div class="search-content">
-                    <!-- 検索フォームはここから -->
                     <div class="search-field">
                         <form action="{{ route('search') }}" method="get">
                             @csrf
-                            <div class='setting-area' style='padding: 0.2rem 1rem'>
-                                <label for='department-label'>学部名</label>
+                            <div class="setting-area">
+                                <label class="form-label" for="department-label">
+                                    <i class="bi bi-building me-1"></i>学部名
+                                </label>
                                 <select class="form-select" name="department" id="department-label">
-                                    <option value=""></option>
+                                    <option value="">すべての学部</option>
                                     <option value="神学部">神学部</option>
                                     <option value="文学部">文学部</option>
                                     <option value="社会学部">社会学部</option>
@@ -64,16 +85,22 @@
                                     <option value="国連・外交統括センター">国連・外交統括センター</option>
                                 </select>
                             </div>
-                            <div class='setting-area' style='padding: 0.2rem 1rem'>
-                                <label for="lecture-label">授業名</label>
-                                <input class="form-control" type="text" name="lecture" id="lecture-label">
+                            <div class="setting-area">
+                                <label class="form-label" for="lecture-label">
+                                    <i class="bi bi-book me-1"></i>授業名
+                                </label>
+                                <input class="form-control" type="text" name="lecture" id="lecture-label" placeholder="授業名を入力">
                             </div>
-                            <div class='setting-area' style='padding: 0.2rem 1rem'>
-                                <label for="teacher-label">先生名</label>
-                                <input class="form-control" type="text" name="teacher" id="teacher-label">
+                            <div class="setting-area">
+                                <label class="form-label" for="teacher-label">
+                                    <i class="bi bi-person me-1"></i>先生名
+                                </label>
+                                <input class="form-control" type="text" name="teacher" id="teacher-label" placeholder="先生名を入力">
                             </div>
-                            <div class="d-grid gap-2 col-10 mx-auto" style='padding-top: 0.8rem'>
-                                <input type='submit' class="btn btn-primary" value="検索">
+                            <div class="d-grid gap-2 col-md-8 mx-auto mt-4">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-search me-1"></i>検索する
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -82,5 +109,4 @@
         </div>
     </div>
 </div>
-
 @endsection

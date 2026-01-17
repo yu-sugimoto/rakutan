@@ -21,3 +21,5 @@ Route::post('/form/check', [ReviewController::class, 'check'])->name('review.che
 Route::post('/form/thanks', [ReviewController::class, 'thanks'])->name('review.thanks');
 Route::get('/terms', [ReviewController::class, 'terms'])->name('terms');
 Route::get('/privacy', [ReviewController::class, 'privacy'])->name('privacy');
+Route::get('/ranking/lecture', [ReviewController::class, 'lectureRanking'])->name('ranking.lecture');
+Route::get('/ranking/teacher', [ReviewController::class, 'teacherRanking'])->name('ranking.teacher');
