@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ReviewRequest;
 use App\Models\Review;
 
 class ReviewController extends Controller
@@ -63,10 +64,10 @@ class ReviewController extends Controller
         return view('form');
     }
 
-    public function check(Request $request)
+    public function check(ReviewRequest $request)
     {
-        //フォームから受け取ったすべてのinputの値を取得
-        $inputs = $request->all();
+        //検証済みのinputの値を取得
+        $inputs = $request->validated();
 
         //入力内容確認ページのviewに変数を渡して表示
         return view('check', [
@@ -74,15 +75,15 @@ class ReviewController extends Controller
         ]);
     }
 
-    public function thanks(Request $request)
+    public function thanks(ReviewRequest $request)
     {
         //フォームから受け取ったactionの値を取得
         $action = $request->input('action');
-        //フォームから受け取ったactionを除いたinputの値を取得
-        $inputs = $request->except('action');
+        //確認画面のhidden項目は書き換えられるため、ここでも検証済みの値だけを使う
+        $inputs = $request->validated();
 
         if ($action !== 'submit') {
-            return redirect()->route('review.check')->withInput($inputs);
+            return redirect()->route('review.form')->withInput($inputs);
         } else {
 
             $contact = new Review();

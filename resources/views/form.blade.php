@@ -37,6 +37,16 @@
                     </div>
                 </div>
 
+                @if($errors->any())
+                <div class="alert alert-danger" role="alert">
+                    <ul class="mb-0">
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
                 <!-- Form -->
                 <form class="needs-validation" action="{{ route('review.check') }}" method="post" novalidate>
                     @csrf
@@ -105,6 +115,7 @@
                                 <option value="2023">2023</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
+                                <option value="2026">2026</option>
                             </select>
                             <div class="invalid-feedback">
                                 <i class="bi bi-exclamation-circle me-1"></i>受講年度を選択してください
@@ -181,6 +192,18 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // 検証エラーで戻ったときに入力内容を復元する
+        const oldInput = @json(session()->getOldInput());
+        ['department', 'lecture', 'year', 'teacher', 'review_comment'].forEach((name) => {
+            if (oldInput[name] !== undefined && oldInput[name] !== null) {
+                document.querySelector(`[name="${name}"]`).value = oldInput[name];
+            }
+        });
+        const rating = document.querySelector(`input[name="review_easy"][value="${oldInput.review_easy}"]`);
+        if (rating) {
+            rating.checked = true;
+        }
+
         const forms = document.querySelectorAll('.needs-validation');
         Array.prototype.slice.call(forms).forEach((form) => {
             form.addEventListener('submit', (event) => {
