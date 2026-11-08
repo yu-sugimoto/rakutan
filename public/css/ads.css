@@ -1,0 +1,119 @@
+.ad-label {
+    display: inline-block;
+    padding: 0 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #475569;
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+/* 広告素材は改変禁止のため、拡大縮小せず元のサイズで表示する */
+.ad-creative {
+    line-height: 0;
+    text-align: center;
+}
+
+/* 下部固定バナー */
+body:has(.ad-sticky) {
+    padding-bottom: calc(77px + env(safe-area-inset-bottom));
+}
+
+.ad-sticky {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1010;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -2px 8px rgba(15, 23, 42, 0.1);
+}
+
+.ad-sticky-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.ad-sticky-close {
+    width: 48px;
+    height: 26px;
+    padding: 0;
+    color: #475569;
+    background: none;
+    border: 0;
+}
+
+/* ランキング内 */
+.ad-inline {
+    padding: 0.75rem;
+    background: var(--card-bg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.ad-inline .ad-label {
+    margin-bottom: 0.5rem;
+}
+
+/* 全画面 */
+.ad-interstitial {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.ad-interstitial-panel {
+    padding: 0.75rem;
+    background: #fff;
+    border-radius: var(--radius-md);
+}
+
+.ad-interstitial-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.ad-interstitial-close {
+    min-height: 44px;
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    background: #475569;
+    border: 0;
+    border-radius: var(--radius-md);
+}
+
+/* スマホ: 300px幅のバナーが画面内に収まるよう余白を詰める */
+@media (max-width: 575.98px) {
+    .ad-inline {
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+        border-radius: 0;
+    }
+
+    .ad-inline .ad-creative {
+        margin-right: -0.75rem;
+        margin-left: -0.75rem;
+    }
+
+    .ad-interstitial {
+        padding: 0;
+    }
+
+    .ad-interstitial-panel {
+        padding: 0.5rem;
+    }
+}

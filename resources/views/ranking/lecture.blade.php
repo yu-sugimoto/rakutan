@@ -96,6 +96,10 @@
                         @endif
                     </div>
                 </div>
+
+                @if($loop->iteration % config('ads.ranking_interval') === 0 && ! $loop->last)
+                    @include('ads.inline', ['slot' => intdiv($loop->iteration, config('ads.ranking_interval')) - 1])
+                @endif
                 @endforeach
             </div>
         </div>

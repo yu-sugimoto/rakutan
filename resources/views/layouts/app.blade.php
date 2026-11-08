@@ -29,6 +29,7 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}">
+    <link rel="stylesheet" href="{{ asset('css/ads.css') }}?v={{ filemtime(public_path('css/ads.css')) }}">
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3325377930156590" crossorigin="anonymous"></script>
@@ -100,6 +101,8 @@
             </div>
         </div>
     </footer>
+
+    @include('ads.sticky')
 
     <!-- Bootstrap 5.3 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

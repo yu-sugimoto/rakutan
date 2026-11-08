@@ -165,6 +165,8 @@
                         <div class="paginate d-flex justify-content-center">
                             {{ $searchs->appends(request()->query())->links('pagination::bootstrap-4') }}
                         </div>
+
+                        @include('ads.interstitial')
                     </div>
                 </div>
             </div>
